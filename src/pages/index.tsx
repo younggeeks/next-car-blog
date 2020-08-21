@@ -7,7 +7,6 @@ import AuthorBox from "../components/Author-box";
 import PopularPost from "../components/PopularPost";
 
 const Homepage = ({ featuredArticles, otherArticles }) => {
-  console.log("the stuff ", featuredArticles, otherArticles);
   return (
     <Layout>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-rows-2 gap-8">

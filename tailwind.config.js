@@ -1,5 +1,8 @@
 module.exports = {
-  purge: [],
+  purge: [
+    "./src/pages/**/*.{js,jsx,ts,tsx}",
+    "./src/components/**/*.{js,jsx,ts,tsx}",
+  ],
   theme: {
     extend: {
       minWidth: {
