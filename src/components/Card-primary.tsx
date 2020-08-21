@@ -27,9 +27,9 @@ const CardPrimary: React.FunctionComponent<ICardPrimaryProps> = ({
 }) => {
   return (
     <div
-      className={`h-${type === "long" ? "" : "64"} col-span-1 row-span-${
-        type === "normal" ? 1 : 2
-      } rounded-md`}
+      className={` col-span-1  rounded-md ${
+        type === "long" ? "row-span-2" : "h-64 row-span-1"
+      } `}
       style={{
         background: `linear-gradient(to bottom, rgba(0,0,0,0.1),rgba(0,0,0,0.31),rgba(0,0,0,1)),url(${article.image})`,
         backgroundSize: "cover",
