@@ -12,10 +12,14 @@ module.exports = {
       height: {
         header: "90px",
         longCard: "400px",
+        "88": "22rem",
       },
       fontFamily: {
         lato: "'Lato', sans-serif",
         "pt-sans": "'PT Sans', sans-serif",
+      },
+      inset: {
+        "-5": "-85px",
       },
     },
   },

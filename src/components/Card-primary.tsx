@@ -1,7 +1,7 @@
 import React from "react";
 import format from "date-fns/format";
 
-interface IArticle {
+export interface IArticle {
   title: string;
   author: IAuthor;
   date: Date;
@@ -9,9 +9,10 @@ interface IArticle {
   image: string;
   body: string;
   tags: string[];
+  sendUsers: () => void;
 }
 
-interface IAuthor {
+export interface IAuthor {
   name: string;
   picture: string;
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Footer from "./Footer";
 
 interface ILayoutProps {
   children: React.ReactNode;
@@ -48,6 +49,7 @@ const Layout: React.FC<ILayoutProps> = ({ children }) => {
       <main className="max-w-screen-xl mx-auto xs:mx-3 xs:mt-3 sm:mx-5 ipad-pro:mx-5 md:max-w-screen-lg md:mx-5 lg:max-w-screen-lg lg:mx-auto mt-5  min-w-smallest">
         {children}
       </main>
+      <Footer  />
     </div>
   );
 };

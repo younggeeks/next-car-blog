@@ -5,3 +5,13 @@
 @tailwind utilities;
 
 @import url("https://fonts.googleapis.com/css2?family=Lato&family=PT+Sans:wght@400;700&display=swap");
+
+.excerpt {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+
+  /* to specify the number of lines you want the text to run through... */
+  -webkit-line-clamp: 4;
+  /* hide the overflowing text, i.e, texts that did not fit in to the box */
+  overflow: hidden;
+}
