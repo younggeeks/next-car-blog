@@ -4,7 +4,7 @@ import format from "date-fns/format";
 
 const PopularPost: React.FC<{ article: IArticle }> = ({ article }) => {
   return (
-    <div className="w-56 float-right mb-6">
+    <div className="w-full md:w-full sm:w-56  float-right mb-6">
       <img
         src={article.image}
         alt=""

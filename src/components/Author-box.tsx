@@ -2,7 +2,7 @@ import React from "react";
 
 const AuthorBox = () => {
   return (
-    <div className="w-56 float-right mb-6">
+    <div className="w-full hidden md:hidden  lg:block float-right mb-6">
       <img
         src="https://avatars2.githubusercontent.com/u/5984570?s=460&u=c55a6dbf5a34552634b98c37114bef53bbb60514&v=4"
         alt=""

@@ -18,17 +18,21 @@ const Homepage = ({ featuredArticles, otherArticles }) => {
           />
         ))}
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 grid-rows-1 gap-8 mt-12">
-        <div className="col-span-1">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-rows-1 gap-8 mt-12">
+        <div className="lg:col-span-2 col-span-1 md:col-span-1 ">
           {otherArticles.slice(0, 3).map((article) => (
             <CardSecondary article={article} />
           ))}
         </div>
-        <div className="">
+        <div className="col-span-1">
           <AuthorBox />
-          {otherArticles.slice(3, 6).map((article) => (
-            <PopularPost article={article} />
-          ))}
+          <h4 className="text-sm mb-4">Popular posts</h4>
+          {otherArticles
+            .slice(3, 6)
+            .reverse()
+            .map((article) => (
+              <PopularPost article={article} />
+            ))}
         </div>
         {/* <div className=" flex flex-column justify-end">
           <AuthorBox />

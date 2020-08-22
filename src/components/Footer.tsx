@@ -12,9 +12,9 @@ const Footer = () => {
   }, []);
 
   return (
-    <div className="h-longCard bg-gray-900 flex flex-col items-center justify-center ">
-      <div className="max-w-screen-xl mx-auto xs:mx-3 xs:mt-3 sm:mx-5 ipad-pro:mx-5 md:max-w-screen-lg md:mx-5 lg:max-w-screen-lg lg:mx-auto mt-5  min-w-smallest grid grid-cols-3 gap-6 text-white ">
-        <div className="flex flex-col items-start">
+    <div className=" bg-gray-900 flex flex-col items-center justify-center ">
+      <div className="max-w-screen-xl mx-auto xs:mx-3 xs:mt-3 sm:mx-5 ipad-pro:mx-5 md:max-w-screen-lg md:mx-5 lg:max-w-screen-lg lg:mx-auto mt-5  min-w-smallest grid sm:grid-cols-3 grid-cols-1 gap-6 text-white ">
+        <div className="flex flex-col sm:items-start items-center">
           <span className="font-lato text-white ">
             Premium{" "}
             <span className="inline-block bg-blue-600 pl-1 pr-1 rounded-md ml-1 text-xs">
