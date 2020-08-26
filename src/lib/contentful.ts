@@ -1,4 +1,4 @@
-import { createClient, ContentfulClientApi } from "contentful";
+import { createClient } from "contentful";
 
 const client = createClient({
   space:
@@ -9,7 +9,8 @@ const client = createClient({
     process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN,
 });
 
-const formatArticle = (fields) => ({
+const formatArticle = (fields: any, id: string) => ({
+  id,
   title: fields.title,
   author: {
     name: fields.author.fields.name,
@@ -30,7 +31,15 @@ export async function getAllArticles() {
     })
   ).items;
 
-  return articles.map((article) => formatArticle(article.fields));
+  return articles.map((article) =>
+    formatArticle(article.fields, article.sys.id)
+  );
+}
+
+export async function getSingleArticle(id: string) {
+  const article = await client.getEntry(id);
+  console.log("the article is ", article);
+  return formatArticle(article.fields, article.sys.id);
 }
 
 export async function getOtherArticles(limit = null) {
@@ -42,5 +51,7 @@ export async function getOtherArticles(limit = null) {
     })
   ).items;
 
-  return articles.map((article) => formatArticle(article.fields));
+  return articles.map((article) =>
+    formatArticle(article.fields, article.sys.id)
+  );
 }

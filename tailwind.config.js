@@ -23,6 +23,7 @@ module.exports = {
       },
       inset: {
         "-5": "-85px",
+        newsletter: "35vh",
       },
     },
   },

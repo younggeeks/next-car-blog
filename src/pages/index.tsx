@@ -34,9 +34,6 @@ const Homepage = ({ featuredArticles, otherArticles }) => {
               <PopularPost article={article} />
             ))}
         </div>
-        {/* <div className=" flex flex-column justify-end">
-          <AuthorBox />
-        </div> */}
       </div>
     </Layout>
   );

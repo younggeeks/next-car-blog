@@ -1,7 +1,9 @@
 import React from "react";
 import format from "date-fns/format";
+import Link from "next/link";
 
 export interface IArticle {
+  id: string;
   title: string;
   author: IAuthor;
   date: Date;
@@ -44,7 +46,11 @@ const CardPrimary: React.FunctionComponent<ICardPrimaryProps> = ({
             {article.author.name} -{" "}
             {format(new Date(article.date), "MMM, dd, Y")}
           </span>
-          <span className="text-md">{article.title}</span>
+          <Link href="/:id" as={`/${article.id}`}>
+            <a>
+              <span className="text-md">{article.title}</span>
+            </a>
+          </Link>
         </div>
       </div>
     </div>

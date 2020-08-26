@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import FooterArticle from "./FooterArticle";
-import useSWR from "swr";
 import { getOtherArticles } from "../lib/contentful";
+import Newsletter from "./Newsletter";
 
 const Footer = () => {
   const [articles, setArticles] = useState([]);
@@ -98,14 +98,14 @@ const Footer = () => {
               >
                 <rect width="34" height="34" rx="3" fill="#373737" />
                 <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M13.8125 8.5H20.1875C23.1211 8.5 25.5 10.8789 25.5 13.8125V20.1875C25.5 23.1211 23.1211 25.5 20.1875 25.5H13.8125C10.8789 25.5 8.5 23.1211 8.5 20.1875V13.8125C8.5 10.8789 10.8789 8.5 13.8125 8.5ZM20.1875 23.9062C22.2381 23.9062 23.9062 22.2381 23.9062 20.1875V13.8125C23.9062 11.7619 22.2381 10.0938 20.1875 10.0938H13.8125C11.7619 10.0938 10.0938 11.7619 10.0938 13.8125V20.1875C10.0938 22.2381 11.7619 23.9062 13.8125 23.9062H20.1875Z"
                   fill="white"
                 />
                 <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M12.75 17C12.75 14.6529 14.6529 12.75 17 12.75C19.3471 12.75 21.25 14.6529 21.25 17C21.25 19.3471 19.3471 21.25 17 21.25C14.6529 21.25 12.75 19.3471 12.75 17ZM14.3438 17C14.3438 18.4641 15.5359 19.6562 17 19.6562C18.4641 19.6562 19.6562 18.4641 19.6562 17C19.6562 15.5348 18.4641 14.3438 17 14.3438C15.5359 14.3438 14.3438 15.5348 14.3438 17Z"
                   fill="white"
                 />
@@ -120,27 +120,12 @@ const Footer = () => {
         <div>
           <h4 className="text-sm mb-4">Recent posts</h4>
           {articles.reverse().map((article) => (
-            <div className="mb-4">
+            <div className="mb-4" key={article.id}>
               <FooterArticle article={article} />
             </div>
           ))}
         </div>
-        <div className="flex flex-col">
-          <h4 className="text-sm mb-4">Newsletter</h4>
-          <input
-            type="text"
-            placeholder="Your name"
-            className="h-10 bg-gray-800 text-xs px-3 rounded-sm mb-4"
-          />
-          <input
-            type="text"
-            placeholder="Your name"
-            className="h-10 bg-gray-800 text-xs px-3 rounded-sm"
-          />
-          <button className="bg-blue-900 text-white text-md p-3 w-full rounded-md text-xs font-semibold mt-5">
-            Subscribe to newsletter
-          </button>
-        </div>
+        <Newsletter />
       </div>
     </div>
   );
