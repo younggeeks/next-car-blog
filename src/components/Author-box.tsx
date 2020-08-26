@@ -9,7 +9,9 @@ const AuthorBox = () => {
         className="object-cover object-center rounded-md w-full "
       />
       <h4 className="font-semibold mt-2 text-gray-800">Samjunior</h4>
-      <span className="block text-xs i mt-2 text-gray-600">Industry</span>
+      <span className="block text-xs i mt-2 text-gray-600">
+        Distinguished Procrastinator
+      </span>
       <p className="mt-3 text-gray-700 font-thin">
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati
         accusantium dicta sint totam quod eaque veniam unde ab excepturi amet!

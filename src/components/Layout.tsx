@@ -9,14 +9,17 @@ const Layout: React.FC<ILayoutProps> = ({ children }) => {
   return (
     <div className="min-w-smallest">
       <header className="h-header bg-black flex items-center justify-center ">
-        <div className="max-w-screen-xl mx-auto xs:mx-3 xs:mt-3 sm:mx-5 ipad-pro:mx-5 md:max-w-screen-lg md:mx-5 lg:max-w-screen-lg lg:mx-auto  w-full flex flex-row items-center justify-between mx-auto ">
-          <span className="font-lato text-white">
-            Premium{" "}
-            <span className="inline-block bg-blue-600 pl-1 pr-1 rounded-md ml-1 text-xs">
-              CAR
-            </span>
-          </span>
-
+        <div className="max-w-screen-xl  xs:mx-3 xs:mt-3 sm:mx-5 ipad-pro:mx-5 md:max-w-screen-lg md:mx-5 lg:max-w-screen-lg lg:mx-auto  w-full flex flex-row items-center justify-between mx-auto ">
+          <Link href="/">
+            <a>
+              <span className="font-lato text-white">
+                Premium{" "}
+                <span className="inline-block bg-blue-600 pl-1 pr-1 rounded-md ml-1 text-xs">
+                  CAR
+                </span>
+              </span>
+            </a>
+          </Link>
           <button className="lg:hidden md:hidden block">
             <svg
               fill="currentColor"
@@ -49,7 +52,7 @@ const Layout: React.FC<ILayoutProps> = ({ children }) => {
       <main className="max-w-screen-xl mx-auto xs:mx-3 xs:mt-3 sm:mx-5 ipad-pro:mx-5 md:max-w-screen-lg md:mx-5 lg:max-w-screen-lg lg:mx-auto mt-5  min-w-smallest">
         {children}
       </main>
-      <Footer  />
+      <Footer />
     </div>
   );
 };

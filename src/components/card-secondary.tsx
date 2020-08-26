@@ -1,7 +1,7 @@
 import React from "react";
 import { IArticle } from "./Card-primary";
 import format from "date-fns/format";
-
+import Link from "next/link";
 const CardSecondary: React.FC<{ article: IArticle }> = ({ article }) => {
   return (
     <div>
@@ -15,9 +15,14 @@ const CardSecondary: React.FC<{ article: IArticle }> = ({ article }) => {
           {article.make}
         </span>
         <div>
-          <span className="text-xs md:text-base lg:text-base font-bold  block sm:mb-2 mb-1 text-gray-800 ">
-            {article.title}
-          </span>
+          <Link href="/:id" as={`/${article.id}`}>
+            <a>
+              <span className="text-xs md:text-base lg:text-base font-bold  block sm:mb-2 mb-1 text-gray-800 ">
+                {article.title}
+              </span>
+            </a>
+          </Link>
+
           <span className=" text-xs font-thin block sm:mb-2 mb-1 text-gray-600 i">
             {article.author.name} -{" "}
             {format(new Date(article.date), "MMM, dd, Y")}

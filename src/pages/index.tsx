@@ -13,7 +13,7 @@ const Homepage = ({ featuredArticles, otherArticles }) => {
         {featuredArticles.map((article, index) => (
           <CardPrimary
             type={index === 0 ? "long" : "normal"}
-            key={article.title}
+            key={article.id}
             article={article}
           />
         ))}
@@ -21,7 +21,7 @@ const Homepage = ({ featuredArticles, otherArticles }) => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-rows-1 gap-8 mt-12">
         <div className="lg:col-span-2 col-span-1 md:col-span-1 ">
           {otherArticles.slice(0, 3).map((article) => (
-            <CardSecondary article={article} />
+            <CardSecondary article={article} key={article.id} />
           ))}
         </div>
         <div className="col-span-1">
@@ -31,7 +31,7 @@ const Homepage = ({ featuredArticles, otherArticles }) => {
             .slice(3, 6)
             .reverse()
             .map((article) => (
-              <PopularPost article={article} />
+              <PopularPost article={article} key={article.id} />
             ))}
         </div>
       </div>

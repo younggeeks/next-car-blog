@@ -1,12 +1,8 @@
 import { createClient } from "contentful";
 
 const client = createClient({
-  space:
-    process.env.CONTENTFUL_SPACE_ID ||
-    process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
-  accessToken:
-    process.env.CONTENTFUL_CONTENTFUL_ACCESS_TOKEN ||
-    process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN,
+  space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
+  accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN,
 });
 
 const formatArticle = (fields: any, id: string) => ({
@@ -38,7 +34,6 @@ export async function getAllArticles() {
 
 export async function getSingleArticle(id: string) {
   const article = await client.getEntry(id);
-  console.log("the article is ", article);
   return formatArticle(article.fields, article.sys.id);
 }
 
