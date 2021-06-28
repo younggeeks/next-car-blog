@@ -8,9 +8,9 @@
     "contentful": "^7.14.6",
     "date-fns": "^2.15.0",
     "dotenv": "^8.2.0",
-    "next": "^9.5.2",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
+    "next": "^11.0.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "react-markdown": "^4.3.1",
     "swr": "^0.3.0",
     "unfetch": "^4.1.0"
